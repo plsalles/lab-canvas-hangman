@@ -60,7 +60,19 @@ class Hangman {
   }
 
   checkWinner() {
-    this.
+    let intGuessedLetters = 0;
+    let finishArray = this.guessedLetter.split('').forEach(element => {
+      if (this.secretWord.includes(element)){
+        intGuessedLetters+=1;
+      }
+    });
+
+    if(intGuessedLetters === this.secretWord.length){
+      return true;
+    } else { return false;}
+
+
+
   }
 
 }
