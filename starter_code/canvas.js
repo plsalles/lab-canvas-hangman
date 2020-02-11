@@ -142,26 +142,26 @@ class HangmanCanvas {
 
   gameOver() {
     let img = new Image();
+    let context = this.ctx;
     img.src = "./images/gameover.png";
-    this.ctx.clearRect(0,0,600,400);
+    //this.ctx.clearRect(0,0,600,400);
     img.onload = function () {
-      console.log(img)
-      this.ctx.drawImage(img,0,0);
-    }
+      console.log(context)
+      context.drawImage(img,0,0);
+    };
 
 
   }
 
   winner() {
     let img = new Image();
+    let context = this.ctx;
     img.src = "./images/awesome.png";
-    this.ctx.clearRect(0,0,600,400);
-    console.log(img.completed)
+    // this.ctx.clearRect(0,0,600,400);
     img.onload = function () {
-      this.ctx.drawImage(img,0,0);}
+      console.log(context)
+      context.drawImage(img,0,0);};
     
- 
-
-  }
+   }
 
 }

@@ -3,7 +3,7 @@ let hangmanCanvas;
 
 class Hangman {
   constructor() {
-    this.words = ['biscoitinho'];
+    this.words = ['ironhack','canvas','hangman','onibus','trem','metro','lanchonete'];
     this.secretWord = '';
     this.letters = [];
     this.guessedLetter = '';
@@ -26,7 +26,7 @@ class Hangman {
       string = String.fromCharCode(keyCode);
     } else { string = keyCode;}
     
-    let alphabet = ['A','B','C','D','E','F','G','H','I','J','k','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     if(alphabet.includes(string.toUpperCase())){
       return true;
       } else {return false;}
@@ -111,14 +111,14 @@ document.onkeydown = (e) => {
     }
   }
   if(hangman.checkGameOver()){
-    console.log('You Lost!')
+    console.log('You Lost!');
     hangmanCanvas.gameOver();
   }
 
   if(hangman.checkWinner()){
-    console.log('You Won!')
+    console.log('You Won!');
     hangmanCanvas.winner();
   }
 
 
-}
+};
